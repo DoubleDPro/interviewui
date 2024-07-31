@@ -1,0 +1,34 @@
+<div class="contairer">
+  <h1>Создание теста</h1>
+  <form (ngSubmit)="onSubmit()">
+    <div class="test-component">
+      <div class="test-component-element">
+        <input id="test-content" type="text" class="test-component-element" [(ngModel)]="testContent" name="content" placeholder="Введите вопрос для теста...">
+      </div>
+      <div class="test-component-element">
+        <label for="is-only-one-answer">У вопроса один правильный ответ?</label>
+        <input id="is-only-one-answer" type="checkbox" (change)="changeOnlyOneAnswer($event)" [(ngModel)]="isOnlyOneAnswer" name="is-only-one-answer">
+      </div>
+      <div class="test-component-element">
+        <input id="first-answer-content" type="text" placeholder="Введите вариант ответа" [(ngModel)]="firstAnswerContent" name="first-answer-content">
+        <label>Верный ответ</label><input id="is-first-answer-correct" type="checkbox" [(ngModel)]="isFirstAnswerCorrect" name="is-first-answer-correct" [checked]="isOnlyOneAnswer">
+      </div>
+      <div class="test-component-element">
+        <input id="second-answer-content" type="text" placeholder="Введите вариант ответа" [(ngModel)]="secondAnswerContent" name="second-answer-content">
+        <label>Верный ответ</label><input id="is-second-answer-correct" type="checkbox" [(ngModel)]="isSecondAnswerCorrect" name="is-second-answer-correct" [disabled]="isOnlyOneAnswer" [checked]="">
+      </div>
+      <div class="test-component-element">
+        <input id="third-answer-content" type="text" placeholder="Введите вариант ответа" [(ngModel)]="thirdAnswerContent" name="third-answer-content">
+        <label>Верный ответ</label><input id="is-third-answer-correct" type="checkbox" [(ngModel)]="isThirdAnswerCorrect" name="is-third-answer-correct" [disabled]="isOnlyOneAnswer" [checked]="">
+      </div>
+      <div class="test-component-element">
+        <input id="fourth-answer-content" type="text" placeholder="Введите вариант ответа" [(ngModel)]="fourthAnswerContent" name="fourth-answer-content">
+        <label>Верный ответ</label><input id="is-fourth-answer-correct" type="checkbox" [(ngModel)]="isFourthAnswerCorrect" name="is-fourth-answer-correct" [disabled]="isOnlyOneAnswer" [checked]="">
+      </div>
+      <div class="test-component-element">
+        <button type="submit">Создать</button>
+      </div>
+    </div>
+  </form>
+</div>
+
