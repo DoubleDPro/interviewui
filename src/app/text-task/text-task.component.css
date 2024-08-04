@@ -1,0 +1,9 @@
+.text-task-component {
+    display: inline-block
+}
+
+.text-task-component-element {
+    display: block;
+    margin-bottom: 10px;
+    width: 100%
+}

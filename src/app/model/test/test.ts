@@ -1,8 +1,8 @@
 import {Answer} from "./answer";
 
 export class Test {
-  content:string;
-  isOnlyOneAnswer:boolean;
+  content: string;
+  isOnlyOneAnswer: boolean;
   answers: Answer[];
 
   constructor(

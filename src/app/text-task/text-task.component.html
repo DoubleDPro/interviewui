@@ -1,0 +1,13 @@
+<div class="container">
+    <h1>Создание текстового задания</h1>
+    <form (ngSubmit)="onSubmit()">
+        <div class="text-task-component">
+            <div class="text-task-component-element">
+                <textarea id="text-task-content" class="text-task-component-element" [(ngModel)]="textTaskContent" name="content" placeholder="Введите задание..."></textarea>
+            </div>
+        </div>
+        <div class="text-task-component-element">
+            <button type="submit">Создать</button>
+        </div>
+    </form>
+</div>

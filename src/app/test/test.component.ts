@@ -2,7 +2,7 @@ import {Component} from "@angular/core";
 import {Test} from "../model/test/test";
 import {FormsModule} from "@angular/forms";
 import {Answer} from "../model/test/answer";
-import {TestsService} from "../services/tests.service";
+import {TestsService} from "../services/test/tests.service";
 
 @Component({
   selector: 'test-component',
@@ -16,16 +16,16 @@ export class TestComponent{
   constructor(private testService: TestsService) {
   }
 
-  testContent:string;
-  isOnlyOneAnswer:boolean;
-  firstAnswerContent:string;
-  isFirstAnswerCorrect:boolean;
-  secondAnswerContent:string;
-  isSecondAnswerCorrect:boolean;
-  thirdAnswerContent:string;
-  isThirdAnswerCorrect:boolean;
-  fourthAnswerContent:string;
-  isFourthAnswerCorrect:boolean;
+  testContent = '';
+  isOnlyOneAnswer = false;
+  firstAnswerContent = '';
+  isFirstAnswerCorrect = false;
+  secondAnswerContent = '';
+  isSecondAnswerCorrect = false;
+  thirdAnswerContent = '';
+  isThirdAnswerCorrect = false;
+  fourthAnswerContent = '';
+  isFourthAnswerCorrect = false;
 
   changeOnlyOneAnswer(values: any) {
     if (values.currentTarget.checked) {
@@ -59,11 +59,11 @@ export class TestComponent{
       answers
     )
 
-    console.log('Saving test' + test)
+    console.log('Saving test ' + test)
 
     this.testService.saveTest(test).subscribe(
       () => console.log('Send to save test')
-    )
+    );
 
   }
 
