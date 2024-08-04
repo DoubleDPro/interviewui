@@ -1,1 +1,16 @@
-Создание квиза...
+<div class="contairer">
+    <h1>Создание квиза</h1>
+        <form (ngSubmit)="onSubmit()">
+            <div class="quiz-component">
+                <div class="quiz-component-element">
+                    <textarea id="quiz-content" class="quiz-component-element" [(ngModel)]="quizContent" name="content" placeholder="Введите задание для квиза..."></textarea>
+                </div>
+                <div class="quiz-component-element">
+                    <textarea id="quiz-answer" class="quiz-component-element" [(ngModel)]="quizAnswer" name="answer" placeholder="Введите ответ на квиз"></textarea>
+                </div>
+                <div class="quiz-component-element">
+                    <button type="submit">Создать</button>
+                </div>
+            </div>
+        </form>
+</div>

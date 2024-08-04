@@ -1,7 +1,10 @@
 import {NgModule} from "@angular/core";
-import {QuizComponent} from "./quiz.component";
+import {FormsModule} from "@angular/forms";
+import {RouterModule} from "@angular/router";
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
-  declarations: [QuizComponent]
+  imports: [FormsModule, RouterModule, HttpClientModule],
+  declarations: []
 })
 export class QuizModule {}
